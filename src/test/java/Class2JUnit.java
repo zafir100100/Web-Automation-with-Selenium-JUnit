@@ -1,19 +1,21 @@
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import javax.swing.*;
+import java.io.File;
+import java.io.IOException;
 import java.security.Key;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 import java.util.List;
 
 public class Class2JUnit {
@@ -147,7 +149,7 @@ public class Class2JUnit {
     }
 
     @Test
-    public void hoverMenu(){
+    public void hoverMenu() {
         driver.get("https://green.edu.bd");
         // use xpath to get elements
         List<WebElement> aboutUsElements = driver.findElements(By.xpath("//a[contains(text(), 'About Us')]"));
@@ -156,6 +158,12 @@ public class Class2JUnit {
         // implementation - 2: hover element from hover
         Actions actions = new Actions(driver);
         actions.moveToElement(aboutUsElements.get(2));
+    }
+
+    @Test
+    public void takeScreenshot() throws IOException {
+        driver.get("https://demoqa.com");
+        Utils.takeScreenshot(driver);
     }
 
 //    @After
