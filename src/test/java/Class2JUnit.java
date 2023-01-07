@@ -38,7 +38,7 @@ public class Class2JUnit {
         driver.findElement(By.id("userEmail")).sendKeys("abdullah@test.com");
         driver.findElement(By.cssSelector("[id=currentAddress]")).sendKeys("Dhaka");
         //the next line will generate error since submit button is hidden under ads
-        driver.findElement(By.id("submit")).click();
+//        driver.findElement(By.id("submit")).click();
     }
 
     @Test
@@ -50,7 +50,7 @@ public class Class2JUnit {
     }
 
     @Test
-    public void buttonClick() {
+    public void buttonClick() throws InterruptedException {
         driver.get("https://demoqa.com/buttons");
         Actions actions = new Actions(driver);
         //implementation -1
@@ -72,6 +72,8 @@ public class Class2JUnit {
         String message1Expected = "double click";
         String message2Expected = "You have done a right click";
         String message3Expected = "You have done a dynamic click";
+        // give some time to pop up message
+        Thread.sleep(4000);
 
         Assert.assertTrue(message1Actual.contains(message1Expected));
         Assert.assertTrue(message2Actual.contains(message2Expected));
@@ -93,7 +95,7 @@ public class Class2JUnit {
 
         Assert.assertTrue(messageActual.contains(expectedMessage));
 
-        driver.findElement(By.id("promptButton")).click();
+        driver.findElement(By.id("promtButton")).click();
         driver.switchTo().alert().sendKeys("Abdus shakur");
         driver.switchTo().alert().accept();
     }
@@ -166,8 +168,9 @@ public class Class2JUnit {
         Utils.takeScreenshot(driver);
     }
 
-//    @After
-//    public void quit() {
-//        driver.quit();
-//    }
+    @After
+    public void quit() throws InterruptedException {
+        Thread.sleep(1000);
+        driver.quit();
+    }
 }
