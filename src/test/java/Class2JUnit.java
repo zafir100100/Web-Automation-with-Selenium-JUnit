@@ -1,21 +1,18 @@
-import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import javax.swing.*;
-import java.io.File;
 import java.io.IOException;
-import java.security.Key;
-import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.util.Date;
 import java.util.List;
 
 public class Class2JUnit {
@@ -166,6 +163,31 @@ public class Class2JUnit {
     public void takeScreenshot() throws IOException {
         driver.get("https://demoqa.com");
         Utils.takeScreenshot(driver);
+    }
+
+    @Test
+    public void modalDialog() {
+        driver.get("https://demoqa.com/modal-dialogs");
+        driver.findElement(By.id("showSmallModal")).click();
+        String text = driver.findElement(By.className("modal-body")).getText();
+        System.out.println(text);
+        driver.findElement(By.id("closeSmallModal")).click();
+    }
+
+    @Test
+    public void uploadImage() {
+        driver.get("https://demoqa.com/upload-download");
+        WebElement uploadElement = driver.findElement(By.id("uploadFile"));
+        // give a file location from your directory
+//        uploadElement.sendKeys("D:\\ad.png");
+//        String text = driver.findElement(By.id("uploadedFilePath")).getText();
+//        Assert.assertTrue(text.contains("ad.png"));
+    }
+
+    @Test
+    public void downloadFile(){
+        driver.get("https://demoqa.com/upload-download");
+        driver.findElement(By.id("downloadButton")).click();
     }
 
     @After
