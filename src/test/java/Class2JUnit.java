@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -20,7 +21,11 @@ public class Class2JUnit {
 
     @Before
     public void setup() {
-        System.setProperty("webdriver.gecko.driver", "./src/test/resources/geckodriver.exe");
+        // implementation - 1
+//        System.setProperty("webdriver.gecko.driver", "./src/test/resources/geckodriver.exe");
+        // implementation - 2
+        // with this, we dont need to download and mention path of chromedrive.exe or geckodriver.exe(firefox)
+        WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headed");
         driver = new FirefoxDriver(options);
