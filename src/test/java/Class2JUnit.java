@@ -185,7 +185,7 @@ public class Class2JUnit {
     }
 
     @Test
-    public void downloadFile(){
+    public void downloadFile() {
         driver.get("https://demoqa.com/upload-download");
         driver.findElement(By.id("downloadButton")).click();
     }
