@@ -25,6 +25,9 @@ public class Class2JUnit {
 //        System.setProperty("webdriver.gecko.driver", "./src/test/resources/geckodriver.exe");
         // implementation - 2
         // with this, we dont need to download and mention path of chromedrive.exe or geckodriver.exe(firefox)
+        // also task manager will not run a lot of instances of geckodriver/chromedriver
+        // with this, we are free to delete chromedriver.exe and geckodriver.exe
+        // but we are keeping those in our project for future references
         WebDriverManager.firefoxdriver().setup();
         FirefoxOptions options = new FirefoxOptions();
         options.addArguments("--headed");
