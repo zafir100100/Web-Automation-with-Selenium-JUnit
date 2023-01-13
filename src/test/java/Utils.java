@@ -19,7 +19,6 @@ public class Utils {
     }
 
     public static void takeScreenshot(WebDriver driver) throws IOException {
-        driver.get("https://demoqa.com");
         File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String time = new SimpleDateFormat("dd-MM-yyyy-hh-mm-ss-aa").format(new Date());
         String fileWithPath = "./src/test/resources/screenshots/" + time + ".png";
