@@ -8,11 +8,10 @@
 - Junit
 - Selenium Webdriver
 
-## Test Report:
+## Load testing report:
 
-![180](https://github.com/zafir100100/junit-java/blob/master/assets/junit-report.png)
+![180](https://github.com/zafir100100/Random-User-API-Performance-Test-Load-and-Stress-using-Jmeter/blob/master/resources/performance-testing-result/screenshots/load-testing/load-testing.PNG)
 
-## Site automated:
-  - Link (https://demoqa.com/)
+## Stress testing report:
 
-![181](https://github.com/zafir100100/junit-java/blob/master/assets/demoqa.png)
+![181](https://github.com/zafir100100/Random-User-API-Performance-Test-Load-and-Stress-using-Jmeter/blob/master/resources/performance-testing-result/screenshots/stress-testing/stress-testing.PNG)
