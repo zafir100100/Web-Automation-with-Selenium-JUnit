@@ -39,9 +39,9 @@ Using Selenium JUnit, developers can test the functionality of their web applica
 
 ## Test Report:
 
-![180](https://github.com/zafir100100/junit-java/blob/master/assets/junit-report.png)
+![180](https://github.com/zafir100100/Web-Automation-with-Selenium-JUnit/blob/master/assets/junit-report.png)
 
 ## Website used for this automation:
   - Link (https://demoqa.com/)
 
-![181](https://github.com/zafir100100/junit-java/blob/master/assets/demoqa.png)
+![181](https://github.com/zafir100100/Web-Automation-with-Selenium-JUnit/blob/master/assets/demoqa.png)
