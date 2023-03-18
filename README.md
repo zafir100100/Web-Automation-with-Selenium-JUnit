@@ -29,14 +29,6 @@ Using Selenium JUnit, developers can test the functionality of their web applica
     // https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager
     implementation group: 'io.github.bonigarcia', name: 'webdrivermanager', version: '5.3.2'
 
-## How to run this project
-- clone the project
-- give this command ``` gradle clean test ```
-
-## Technology used:
-- Junit
-- Selenium Webdriver
-
 ## Test Report:
 
 ![180](https://github.com/zafir100100/Web-Automation-with-Selenium-JUnit/blob/master/assets/junit-report.png)
